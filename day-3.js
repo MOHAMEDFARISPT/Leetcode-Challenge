@@ -1,11 +1,10 @@
 
-// 58. Length of Last Word
+// 345. Reverse Vowels of a String
 
-// Given a string s consisting of words and spaces, return the length of the last word in the string.
 
-// A word is a maximal 
-// substring
-//  consisting of non-space characters only.
+// Given a string s, reverse only all the vowels in the string and return it.
+
+// The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
 
 
 
