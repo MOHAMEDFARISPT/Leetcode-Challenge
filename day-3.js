@@ -11,16 +11,27 @@
 
 
 
-let s = "Hello World"
+function reverseVowels(s) {
+  const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+  let left = 0, right = s.length - 1;
+  const chars = s.split('');
+  console.log(chars)
 
-var lengthOfLastWord = function(s) {
-    s=s.trim()
-    let word=s.split(' ').reverse
-    return word
-    let lastWord=word[word.length-1]
-    return lastWord.length
-  
-  
-  };
+  while (left < right) {
+      console.log(vowels.has(chars[left]))
+      if (vowels.has(chars[left]) && vowels.has(chars[right])) {
+          [chars[left], chars[right]] = [chars[right], chars[left]];
+          left++;
+          right--;
+      } else if (!vowels.has(chars[left])) {
+          left++;
+      } else {
+          right--;
+      }
+  }
 
-  console.log(lengthOfLastWord(s))   //5
+  return chars.join('');
+}
+s = "hello"
+
+console.log(reverseVowels(s))
